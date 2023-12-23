@@ -1,0 +1,42 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h2 class="text-info" style="color:black;">Bem Vindo!! Calcule a Sua Parcela Por favor!!</h2>
+    <form method="post">
+        <div class="border backgroundlightgreen">
+            <div class="form-group row justify-content-center">
+                <div class="col-2">
+                    <label asp-for="Recebimento.ValorIntegral">Valor Devido</label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Recebimento.ValorIntegral" class="form-control" />
+                    <span asp-validation-for="Recebimento.ValorIntegral" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row justify-content-center">
+                <div class="col-2">
+                    <label asp-for="Recebimento.NParcelas">Numero de Parcelas</label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Recebimento.NParcelas" class="form-control" />
+                    <span asp-validation-for="Recebimento.NParcelas" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row justify-content-center">
+                <p>Valor Total Devido: @Model.ValorFinalFormatado</p>
+            </div>
+            <div class="form-group row justify-content-center">
+                <input type="submit" value="Calcular" class="btn btn-success" />
+                <input type="submit" name="clear" value="Novo Calculo" class="btn btn-info ml-2" />
+            </div>
+            <div class="form-group row justify-content-center">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            </div>
+        </div>
+    </form>
+</div>

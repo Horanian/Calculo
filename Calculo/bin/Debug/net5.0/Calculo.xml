@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Calculo</name>
+    </assembly>
+    <members>
+        <member name="T:Calculo.Models.ViewModel.Recebimento">
+            <summary>
+            Recebimento Class
+            </summary>
+        </member>
+        <member name="P:Calculo.Models.ViewModel.Recebimento.ValorIntegral">
+            <summary>
+            esse é o valor total que o usuário irá digitar para que seja calculado o juros juntamente com o numero
+            de parcelas selecionadas, o numero de parcela é =  a tempo
+            </summary>
+        </member>
+        <member name="P:Calculo.Models.ViewModel.Recebimento.NParcelas">
+            <summary>
+            este é o número de parcelas que determina o valor exponencial da fórmula
+            </summary>
+        </member>
+        <member name="P:Calculo.Models.ViewModel.Recebimento.ValorFinal">
+            <summary>
+            este é o valor final do calculo, que depois de utilizar o número das parcelas, juntamente com o 
+            valor integral surgerido reproduz o valor final
+            </summary>
+        </member>
+        <member name="P:Calculo.Models.ViewModel.Recebimento.JurosDoValor">
+            <summary>
+            JurosDoValor
+            </summary>
+        </member>
+        <member name="T:Calculo.Pages.ErrorModel">
+            <summary>
+            Pagemodel
+            </summary>
+        </member>
+        <member name="P:Calculo.Pages.ErrorModel.RequestId">
+            <summary>
+            RéquestId
+            </summary>
+        </member>
+        <member name="P:Calculo.Pages.ErrorModel.ShowRequestId">
+            <summary>
+            Show
+            </summary>
+        </member>
+        <member name="M:Calculo.Pages.ErrorModel.#ctor(Microsoft.Extensions.Logging.ILogger{Calculo.Pages.ErrorModel})">
+            <summary>
+            logger
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Calculo.Pages.ErrorModel.OnGet">
+            <summary>
+            OnGet
+            </summary>
+        </member>
+        <member name="T:Calculo.Pages.PrivacyModel">
+            <summary>
+            PageModel
+            </summary>
+        </member>
+        <member name="M:Calculo.Pages.PrivacyModel.#ctor(Microsoft.Extensions.Logging.ILogger{Calculo.Pages.PrivacyModel})">
+            <summary>
+            logger
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Calculo.Pages.PrivacyModel.OnGet">
+            <summary>
+            Onget
+            </summary>
+        </member>
+        <member name="T:Calculo.Program">
+            <summary>
+            inicio
+            </summary>
+        </member>
+        <member name="M:Calculo.Program.Main(System.String[])">
+            <summary>
+            Args
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Calculo.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            args
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            configuration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Calculo.Startup.Configuration">
+            <summary>
+            configuration
+            </summary>
+        </member>
+        <member name="M:Calculo.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Calculo.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+             This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:IndexModel">
+            <summary>
+            indexModel
+            </summary>
+        </member>
+        <member name="P:IndexModel.ValorFinal">
+            <summary>
+            Valor final que vêm da classe recebimento
+            </summary>
+        </member>
+        <member name="P:IndexModel.Recebimento">
+            <summary>
+            Recebimento
+            </summary>
+        </member>
+        <member name="P:IndexModel.ValorFinalFormatado">
+            <summary>
+            Irá receber o valor final após o calculo
+            </summary>
+        </member>
+        <member name="F:IndexModel._cFactory">
+            <summary>
+            armazena a referência para a instância do IHttpClientFactory que é passada para o construtor
+            </summary>
+        </member>
+        <member name="M:IndexModel.#ctor(System.Net.Http.IHttpClientFactory)">
+            <summary>
+            este contrutor da classe IndexModel aceita uma instância de IHttpClientFactory como parâmetro
+             Essa instância será fornecida pelo sistema de Injeção de Dependência do .NET Core quando uma instância de IndexModel for criada
+            </summary>
+            <param name="cFactory"></param>
+        </member>
+        <member name="M:IndexModel.OnGet">
+            <summary>
+            está preparando os dados que serão usados na página quando uma solicitação GET é feita para ela
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IndexModel.OnPostAsync(System.String)">
+            <summary>
+            manipulador de ação para o HTTPost
+            </summary>
+            <param name="clear">Limpa o valor final formatado</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
